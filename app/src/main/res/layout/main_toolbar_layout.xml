@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/colorPrimary"
+    android:elevation="4dp"
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource"
+    tools:targetApi="lollipop">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/main_toolbar_title"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/main_toolbar_icon_layout"
+            android:layout_toLeftOf="@+id/main_toolbar_icon_layout"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout_mood_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageview_toolbar_left_arrorw"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/activity_vertical_margin" />
+
+            <TextView
+                android:id="@+id/textview_toolbar_mood_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="month"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageview_toolbar_right_arrorw"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_vertical_margin" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="15dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_toolbar_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_toolbar_log_book"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="15dp"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_toolbar_add"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="15dp"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_filter_add"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+
+                android:padding="15dp"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_toolbar_search"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="15dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/main_toolbar_bell_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginRight="6dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_toolbar_bell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/main_toolbar_bell_counter"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="8dp"
+
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_toolbar_menu"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="15dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>
